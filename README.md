@@ -1,177 +1,181 @@
-# Tesla (TSLA) – Comprehensive Financial Analysis
+#  — Financial & Product Analysis Tesla, Inc. (TSLA) (2012–2020)
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![Made with Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange)](https://jupyter.org/)
-
-A complete financial & technical analysis of **Tesla (TSLA)** stock, covering:
-
-- Historical price data (2013–2019) with technical indicators (SMA, Bollinger Bands, RSI, MACD)
-- Daily returns, cumulative return, and rolling volatility
-- Annual financial fundamentals (revenue, net income, free cash flow, vehicle deliveries)
-- Monte Carlo simulation of 1‑year future price paths (1,000 simulations)
-- Risk metrics: annualised volatility, Sharpe ratio, Value‑at‑Risk (VaR), maximum drawdown
-
-The analysis is available as both a **Python script** (`tesla_financial_analysis.py`) and an **interactive Jupyter Notebook** (`tesla_financial_analysis.ipynb`).
+> A comprehensive financial analysis of Tesla, Inc. combining quantitative Python-based stock analysis with fundamental research, valuation modelling, and strategic insights.
 
 ---
 
-## 📊 Key Visual Results
+#  
 
-### 1. Technical Dashboard
-![Technical Analysis](outputs/01_technical_analysis.png)
+Authors
 
-### 2. Returns & Risk Analysis
-![Returns and Risk](outputs/02_returns_risk.png)
+| Name | Roll No. | Role |
+|------|----------|------|
+| Kanishk Raj | BBA/15073/19 | Research & Fundamental Analysis |
+| Abhishek Kashyap | BBA/15083/19 | Valuation & Report Writing |
+| Harsh Parashar | BBA/15102/19 | ⚙️ Tech Lead — Python, Data & Visualisation |
 
-### 3. Annual Financial Highlights (2018–2023)
-![Financials](outputs/03_financials.png)
-
-### 4. Monte Carlo Forecast (1 Year)
-![Monte Carlo](outputs/04_monte_carlo.png)
-
-### 5. Summary Metrics Card
-![Summary](outputs/05_summary.png)
+**Supervised by:** Dr. Vijay Agarwal, Head of Department — Management
+**Institution:** Birla Institute of Technology, Mesra, Ranchi
+**Degree:** Bachelor of Business Administration (BBA) — Final Year Project
 
 ---
 
-## 📈 Key Findings (from the analysis)
+# Project Overview
 
-| Metric                     | Value                |
-|----------------------------|----------------------|
-| Current Price              | $3,536.14 *          |
-| Period High                | $4,572.88            |
-| Period Low                 | $40.17               |
-| Total Return (period)      | **5686.2%**          |
-| Annual Return (CAGR)       | **55.4%**            |
-| Annual Volatility          | **55.4%**            |
-| Sharpe Ratio               | **2.24**             |
-| Max Drawdown               | **-55.4%**           |
-| Monte Carlo – Bear (5th)   | $2,808.59            |
-| Monte Carlo – Base (Median)| $6,925.58            |
-| Monte Carlo – Bull (95th)  | $17,290.42           |
+This project delivers an end-to-end analysis of Tesla, Inc. from 2012 to 2020 — spanning:
 
-> *Note: The absolute price values shown are from the **simulated/synthetic** data included in the fallback mode of the script. Real‑world TSLA prices (split‑adjusted) are far lower. Replace with live `yfinance` data for actual figures.*
+- **Technical stock analysis** using Python (yfinance, pandas, matplotlib)
+- **Fundamental financial analysis** based on SEC 10-K filings
+- **Macroeconomic & industry landscape** including EV market growth and COVID-19 impact
+- **Valuation modelling** via DCF and Comparable Company Analysis (CCA)
+- **Monte Carlo price simulation** using Geometric Brownian Motion (GBM)
+- **Strategic outlook** covering Gigafactories, FSD, and energy storage
 
 ---
 
-## Features
+# Repository Structure
 
-- **Data acquisition** – downloads live TSLA data from Yahoo Finance (or generates realistic synthetic data if `yfinance` is unavailable).
-- **Technical indicators** – SMA 20/50/200, Bollinger Bands, RSI (14), MACD, signal line.
-- **Risk analysis** – daily return distribution, rolling 30‑day volatility, VaR (95%), CVaR, maximum drawdown.
-- **Fundamentals** – annual revenue, gross profit, net income, FCF, deliveries (2018–2023).
-- **Monte Carlo simulation** – 1,000 Geometric Brownian Motion (GBM) paths over 252 trading days.
-- **Publication‑ready plots** – 5 high‑resolution charts summarising all aspects.
-- **Console summary** – prints a clean metrics table at the end.
+tesla-financial-analysis/
+│
+├── tesla_analysis.ipynb        # Python notebook — technical & quantitative analysis
+├── Tesla_BBA_Report.pdf        # Full academic report (BBA Final Project)
+├── requirements.txt            # Python dependencies
+├── README.md                   # This file
+│
+├── data/
+│   └── tsla_ohlcv.csv          # Optional: saved OHLCV data from Yahoo Finance
+│
+└── images/
+├── technical_dashboard.png
+├── returns_risk_analysis.png
+├── financial_highlights.png
+└── monte_carlo_simulation.png
+
 
 ---
 
-## Installation
+## 🔧 Tech Stack
+> Technical implementation by **Harsh Parashar** (Tech Lead)
 
-Clone the repository and install the required packages:
+| Tool | Purpose |
+|------|---------|
+| `Python 3.8+` | Core programming language |
+| `yfinance` | Live stock data from Yahoo Finance |
+| `pandas` | Data manipulation and analysis |
+| `numpy` | Numerical computations |
+| `matplotlib` | Data visualisation |
+| `seaborn` | Statistical plots |
+| `scipy` | Statistical analysis (skewness, kurtosis, VaR) |
 
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 ```bash
-git clone https://github.com/Harsh151999/Financial-Analysis-Tesla.git
-cd Financial-Analysis-Tesla
+git clone https://github.com/YOUR_USERNAME/tesla-financial-analysis.git
+cd tesla-financial-analysis
+```
+
+### 2. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-Usage
-Run the full analysis script
-bash
-python tesla_financial_analysis.py
-All charts are saved to the outputs/ folder.
+### 3. Run the notebook
+```bash
+jupyter notebook tesla_analysis.ipynb
+```
 
-Run the Jupyter Notebook interactively
-bash
-jupyter notebook tesla_financial_analysis.ipynb
-Execute cells one by one to see intermediate outputs and modify parameters (e.g., ticker, date range, number of Monte Carlo simulations).
+> **Note:** If `yfinance` is unavailable, the notebook automatically falls back to
+> synthetic TSLA-like data so all cells run without errors.
 
- Methodology
-Technical Indicators
-Bollinger Bands – 20‑day SMA ± 2 standard deviations.
+---
 
-RSI – standard 14‑day formula (100 – 100/(1 + RS)).
+#  Analysis Modules
 
-MACD – 12‑day EMA minus 26‑day EMA; signal line is 9‑day EMA of MACD.
+### 1. Technical Indicators
+- Simple Moving Averages: SMA 20 / 50 / 200
+- Exponential Moving Averages: EMA 12 / 26 → MACD & Signal Line
+- Bollinger Bands (20-day, ±2σ)
+- RSI — 14-day Relative Strength Index
+- Daily / Log Returns, Cumulative Return, 30-day Rolling Volatility
 
-Statistical Risk Metrics
-Annualised volatility = daily std × √252
+### 2. Risk Analysis
 
-Sharpe ratio = (CAGR – risk‑free rate) / annual volatility (risk‑free assumed 0 for simplicity)
+| Metric | Description |
+|--------|-------------|
+| Annual Return (CAGR) | Compound annual growth rate |
+| Annual Volatility | Annualised standard deviation of returns |
+| Sharpe Ratio | Risk-adjusted return |
+| VaR 95% | Value at Risk — worst expected daily loss (95% confidence) |
+| CVaR 95% | Conditional VaR — expected loss beyond VaR threshold |
+| Max Drawdown | Peak-to-trough price decline |
+| Skewness / Kurtosis | Return distribution shape and tail risk |
 
-VaR 95% – 5th percentile of daily returns
+### 3. Annual Financial Highlights (SEC Data)
 
-CVaR (Expected Shortfall) – average of returns ≤ VaR
+Tesla's revenue grew **76× from $413M (2012) to $31.54B (2020)**. Key milestones:
 
-Monte Carlo Simulation (GBM)
-Uses historical daily log‑returns to estimate μ and σ
+| Year | Revenue | Net Income | Highlight |
+|------|---------|------------|-----------|
+| 2012 | $0.41B | $(0.40)B | Model S launch |
+| 2017 | $11.76B | $(1.96)B | Model 3 ramp begins |
+| 2019 | $24.58B | $(0.86)B | Shanghai Gigafactory opens |
+| 2020 | $31.54B | **$0.69B** | ✅ First full-year GAAP profit |
 
-Simulates 1,000 independent price paths:
+### 4. Monte Carlo Simulation
+- **Method:** Geometric Brownian Motion (GBM)
+- **Parameters:** 1,000 simulations × 252 trading days (1 year)
+- **Output:** Percentile-based price scenarios (Bear / Base / Bull)
 
-S
-t
-+
-1
-=
-S
-t
-⋅
-e
-(
-μ
-−
-σ
-2
-2
-)
-Δ
-t
-+
-σ
-Δ
-t
- 
-Z
-S 
-t+1
-​
- =S 
-t
-​
- ⋅e 
-(μ− 
-2
-σ 
-2
- 
-​
- )Δt+σ 
-Δt
-​
- Z
- 
-where 
-Z
-∼
-N
-(
-0
-,
-1
-)
-Z∼N(0,1) and Δt = 1 day.
+---
 
-Project Structure
-text
-Financial-Analysis-Tesla/
-├── tesla_financial_analysis.py     # Single‑file Python script
-├── tesla_financial_analysis.ipynb  # Interactive Jupyter notebook
-├── outputs/                        # Generated charts
-│   ├── 01_technical_analysis.png
-│   ├── 02_returns_risk.png
-│   ├── 03_financials.png
-│   ├── 04_monte_carlo.png
-│   └── 05_summary.png
-├── requirements.txt
-└── README.md
+## 💡 Key Findings
+
+1. **Regulatory credit dependency:** Tesla's 2020 GAAP profit ($721M) was enabled by
+   $1.6B in regulatory credit sales — without these, core operations would have been loss-making.
+
+2. **Technology premium:** Tesla traded at 157× EV/EBITDA vs. 12–14× for Ford/GM,
+   reflecting the market's view of Tesla as a tech company, not an automaker.
+
+3. **Cash flow inflection:** Operating cash flow turned sharply positive in 2020
+   ($5.94B), up from –$524M in 2015 — signalling financial maturation.
+
+4. **Delivery ramp:** From 2,650 units (2012) to 499,550 units (2020) — a 188×
+   increase driven by Model 3 and Model Y.
+
+5. **Monte Carlo range (1-year from Dec 2020):**
+   - Bear case (5th pct): ~$500
+   - Base case (50th pct): ~$700
+   - Bull case (95th pct): ~$1,000+
+
+---
+
+# Data Sources
+
+- [Tesla SEC 10-K Annual Reports](https://www.sec.gov/cgi-bin/browse-edgar) (2012–2020)
+- [Tesla Investor Relations](https://ir.tesla.com) — Delivery & production reports
+- [Yahoo Finance](https://finance.yahoo.com) via `yfinance` — OHLCV stock data
+- IEA Global EV Outlook 2021
+- BloombergNEF Electric Vehicle Outlook 2020
+
+---
+
+# Disclaimer
+
+This project is for **academic and educational purposes only**. It does not constitute
+financial advice. All analysis is historical and based on publicly available data.
+Past performance is not indicative of future results.
+
+---
+
+# License
+
+BBA Final Year Project — BIT Mesra. All rights reserved by the authors.
+For academic reference only.
+
+---
+
+*"Tesla's 2012–2020 journey stands as a paradigmatic case study in disruptive innovation,
+strategic patience, and the market's willingness to price in transformative long-term potential."*
