@@ -6,7 +6,7 @@
 
 A complete financial & technical analysis of **Tesla (TSLA)** stock, covering:
 
-- Historical price data (2019–2024) with technical indicators (SMA, Bollinger Bands, RSI, MACD)
+- Historical price data (2013–2019) with technical indicators (SMA, Bollinger Bands, RSI, MACD)
 - Daily returns, cumulative return, and rolling volatility
 - Annual financial fundamentals (revenue, net income, free cash flow, vehicle deliveries)
 - Monte Carlo simulation of 1‑year future price paths (1,000 simulations)
