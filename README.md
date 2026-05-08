@@ -1,4 +1,4 @@
-#  — Financial & Product Analysis Tesla, Inc. (TSLA) (2012–2020)
+# Financial & Product Analysis Tesla, Inc. (TSLA) (2012–2020)
 
 > A comprehensive financial analysis of Tesla, Inc. combining quantitative Python-based stock analysis with fundamental research, valuation modelling, and strategic insights.
 
