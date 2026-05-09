@@ -1,4 +1,4 @@
-# Tesla Financial Data Analytics
+# Financial Data Analytics (Tesla)
 
 > End-to-end stock analysis (2012–2020) — risk metrics, Monte Carlo simulation, and an interactive executive dashboard.
 
