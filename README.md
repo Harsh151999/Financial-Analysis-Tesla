@@ -1,6 +1,6 @@
 # Financial Analysis [Tesla, Inc. (TSLA) (2012–2020)]
 
-#Tesla-financial-data-analytics/
+## Tesla-financial-data-analytics/
 │
 ├── tesla_analysis.ipynb        # Main analysis notebook (data → insights)
 ├── Tesla_Dashboard.html        # Interactive executive dashboard
@@ -16,14 +16,14 @@
     ├── returns_risk_analysis.png
     └── monte_carlo_simulation.png
 
-# Jupyter notebook
-git clone https://github.com/YOUR_USERNAME/tesla-financial-data-analytics.git
-cd tesla-financial-data-analytics
-pip install -r requirements.txt
-jupyter notebook tesla_analysis.ipynb
+## Jupyter notebook
+-git clone https://github.com/YOUR_USERNAME/tesla-financial-data-analytics.git
+-cd tesla-financial-data-analytics
+-pip install -r requirements.txt
+-jupyter notebook tesla_analysis.ipynb
 
 
-# Streamlit app
+## Streamlit app
 bashpip install -r requirements.txt
 streamlit run app.py
 Option 3 — Docker
